@@ -1,0 +1,20 @@
+{
+  "name": "antd-config-form",
+  "version": "1.0.0",
+  "description": "easy way to write antd form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malarkey-Jhu/antd-config-form.git"
+  },
+  "keywords": ["antd-form"],
+  "author": "Alan Jhu <alan61109@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Malarkey-Jhu/antd-config-form/issues"
+  },
+  "homepage": "https://github.com/Malarkey-Jhu/antd-config-form#readme"
+}
