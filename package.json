@@ -4,17 +4,53 @@
   "description": "easy way to write antd form",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint '**/*.{js,ts,tsx}'",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier-eslint --write \"$(pwd)/src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Malarkey-Jhu/antd-config-form.git"
   },
-  "keywords": ["antd-form"],
+  "keywords": [
+    "antd-form"
+  ],
   "author": "Alan Jhu <alan61109@163.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Malarkey-Jhu/antd-config-form/issues"
   },
-  "homepage": "https://github.com/Malarkey-Jhu/antd-config-form#readme"
+  "homepage": "https://github.com/Malarkey-Jhu/antd-config-form#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/parser": "^2.30.0",
+    "cz-conventional-changelog": "3.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "prettier-eslint": "^9.0.1",
+    "prettier-eslint-cli": "^5.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "npm run lint:fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
